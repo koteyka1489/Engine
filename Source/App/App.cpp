@@ -42,7 +42,7 @@ int App::Go()
     {
         if (const auto ecode = Window::PrecessMessages())
         {
-            return *ecode;
+            return ecode;
         }
         DoFrame();
     }

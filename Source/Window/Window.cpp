@@ -103,7 +103,7 @@ void Window::SetTitle(const std::string str)
 	}
 }
 
-std::optional<int> Window::PrecessMessages()
+int Window::PrecessMessages()
 {
 	MSG msg;
 	while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE) )
@@ -117,7 +117,7 @@ std::optional<int> Window::PrecessMessages()
 		DispatchMessage(&msg);
 	}
 
-	return {};
+	return -1;
 }
 
 HWND Window::GetHwnd()

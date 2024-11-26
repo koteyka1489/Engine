@@ -1,4 +1,5 @@
 #include "VertexShader.h"
+#include <d3dcompiler.h>
 
 VertexShader::VertexShader(Graphics& gfx, std::wstring fileName)
 {
